@@ -1,4 +1,4 @@
-import mediapipe as mp
+import mdpipe as mp
 import cv2
 #print(mp.__version__)
 #print(cv2.__version__)
