@@ -11,6 +11,7 @@ EMOTION_LABEL=['怒り','嫌悪','恐怖','喜び','悲しみ','驚き','無感�
 
 device=torch.device('cuda' if torch.cuda.is_available()else 'cpu')
 vit_model=ViT(num_classes=7).to(device)
+vit_model.load_state_dict(torch.load('vit_emotion_best.pth', map_location=device))
 vit_model.eval()
 
 def preprocess(face_crop):
